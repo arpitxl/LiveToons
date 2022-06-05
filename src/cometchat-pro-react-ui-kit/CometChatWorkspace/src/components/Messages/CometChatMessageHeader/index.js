@@ -6,6 +6,8 @@ import { jsx } from "@emotion/core";
 import PropTypes from "prop-types";
 import { CometChat } from "@cometchat-pro/chat";
 
+import Filter from "./Filter";
+
 import { MessageHeaderManager } from "./controller";
 
 import { CometChatAvatar, CometChatUserPresence } from "../../Shared";
@@ -526,6 +528,9 @@ class CometChatMessageHeader extends React.Component {
 				}
 			});
 	};
+	filter = () => {
+		<Filter />
+	}
 
 	initiateAudioCall = () => {
 		this.props.actionGenerated(enums.ACTIONS["INITIATE_AUDIO_CALL"]);
@@ -577,19 +582,13 @@ class CometChatMessageHeader extends React.Component {
 			</span>
 		);
 
-		// let faceBtn = (
-		// 	<div css={chatOptionStyle(faceIcon, this.context, 0)} onClick={this.initiateAudioCall}>
-		// 		<i></i>
-		// 	</div>
-		// );
-
 		const audioCallText = Translator.translate("AUDIO_CALL", this.context.language);
 		let audioCallBtn = (
 			<>
 			<div className={audioCallClassName} css={chatOptionStyle(audioCallIcon, this.context, 0)} title={audioCallText} onClick={this.initiateAudioCall}>
 				<i></i>
 			</div>
-			<div css={chatOptionStyle(faceIcon, this.context, 0)} onClick={this.patel}>
+			<div css={chatOptionStyle(faceIcon, this.context, 0)} onClick={this.filter}>
 				<i></i>
 			</div>
 			</>

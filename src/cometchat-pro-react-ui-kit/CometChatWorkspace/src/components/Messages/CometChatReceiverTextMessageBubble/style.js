@@ -144,7 +144,7 @@ export const messageTxtStyle = (showVariation, count, context) => {
         lineHeight: "20px",
         fontWeight: "400",
         " a": {
-            color: "#0432FF",
+            color: "#39f",
             "&:hover": {
                 color: "#04009D"
             }
