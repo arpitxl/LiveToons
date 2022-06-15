@@ -6,8 +6,6 @@ import { jsx } from "@emotion/core";
 import PropTypes from "prop-types";
 import { CometChat } from "@cometchat-pro/chat";
 
-import Filter from "./Filter";
-
 import { MessageHeaderManager } from "./controller";
 
 import { CometChatAvatar, CometChatUserPresence } from "../../Shared";
@@ -35,6 +33,7 @@ import audioCallIcon from "./resources/audio-call.svg";
 import videoCallIcon from "./resources/video-call.svg";
 import detailPaneIcon from "./resources/info.svg";
 import faceIcon from "./resources/faceIcon.svg"
+import { Link } from 'react-router-dom'
 
 class CometChatMessageHeader extends React.Component {
 	item;
@@ -529,7 +528,7 @@ class CometChatMessageHeader extends React.Component {
 			});
 	};
 	filter = () => {
-		<Filter />
+		window.location.href = "filter";
 	}
 
 	initiateAudioCall = () => {
@@ -589,6 +588,7 @@ class CometChatMessageHeader extends React.Component {
 				<i></i>
 			</div>
 			<div css={chatOptionStyle(faceIcon, this.context, 0)} onClick={this.filter}>
+				{/* <Link to="filter" onClick={this.filter}><i></i></Link> */}
 				<i></i>
 			</div>
 			</>

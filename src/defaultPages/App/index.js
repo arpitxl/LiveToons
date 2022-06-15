@@ -8,6 +8,8 @@ import { jsx } from '@emotion/core';
 
 import PrivateRoute from '../../PrivateRoute';
 
+import Filter from '../Filter';
+
 import KitchenSinkApp from '../../defaultPages/KitchenSinkApp';
 import HomePage from '../../defaultPages/HomePage';
 
@@ -27,6 +29,7 @@ import {
 import {
     wrapperStyle
 } from "./style";
+import LocalRoute from '../../LocalRoute';
 
 const history = createBrowserHistory();
 
@@ -53,6 +56,7 @@ class App extends React.Component {
                         <PrivateRoute path="/group-list" component={CometChatGroupList} />
                         <PrivateRoute path="/user-list" component={CometChatUserList} />
                         <PrivateRoute path="/messages" component={CometChatMessages} chatWithGroup="supergroup" />
+                        <LocalRoute path="/filter" component={Filter} isLoggedIn={true} />
                         <PrivateRoute exact path="/" component={HomePage} />
                         <Route path="/login" component={KitchenSinkApp} />
                     </Switch>
