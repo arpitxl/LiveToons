@@ -1,9 +1,13 @@
 import React from 'react'
 import "./style.css"
+import { Link } from 'react-router-dom'
 
 function Filter() {
     return (
         <div>
+            {/* <div id="close_button">
+                <button id="back_button" type="button"><Link to="/">BACK</Link></button>
+            </div> */}
             <div id="selections">
                 <img id="hat1" src="./assets/models/hat1/thumbnail.png" />
                 <img id="hat2" src="./assets/models/hat2/thumbnail.png" />

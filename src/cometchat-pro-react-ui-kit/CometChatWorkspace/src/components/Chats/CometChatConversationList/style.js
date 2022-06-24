@@ -5,6 +5,7 @@ export const chatsWrapperStyle = (props, theme) => {
     } : {};
 
     return {
+        background: "#232323",
         display: "flex",
         flexDirection: "column",
         height: "100%",

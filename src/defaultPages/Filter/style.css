@@ -1,15 +1,27 @@
-* {
-    background: transparent !important;
-}
-
 html,
 body {
-    position: relative;
+    /* position: relative;
     margin: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden
+    height: 100%; */
+    overflow: hidden;
 }
+
+/* #close_button {
+    background-color: grey !important;
+    float: right;
+    margin: 5px 5px 0 0;
+} */
+
+/* #back_button {
+    width: 6vw;
+    height: 4vh;
+}
+
+#back_button:hover {
+    cursor: pointer;
+
+} */
 
 #selections {
     position: fixed;
@@ -42,7 +54,8 @@ body {
     top: 10%;
     width: 80%;
     height: 80%;
-    /* border: solid 10px white; */
+    border: solid 5px white;
+    visibility: hidden;
 }
 
 #preview-image {
@@ -58,18 +71,17 @@ body {
     padding: 5px;
     border: solid 1px;
     cursor: pointer;
-    /* color: white; */
-    /* border: solid 5px white; */
+    color: white;
+    border: solid 5px white;
     right: -5px;
     top: -5px;
 }
 
 #preview-share {
-    /* border: solid 1px; */
+    border: solid 1px;
     text-align: center;
     cursor: pointer;
-    /* background: white; */
-
+    background: grey;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -77,4 +89,16 @@ body {
     padding: 10px 30px;
     border-radius: 10px;
     border: none;
+}
+
+#capture {
+    position: fixed;
+    bottom: 2vh;
+    left: 50%;
+    height: 6vw;
+    width: 6vw;
+    border: solid 2px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }

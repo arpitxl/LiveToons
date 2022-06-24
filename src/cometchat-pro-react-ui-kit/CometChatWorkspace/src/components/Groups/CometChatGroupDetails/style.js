@@ -1,6 +1,7 @@
 export const detailStyle = (context) => {
 
     return {
+        background: "#232323",
         height: "100%",
         position: "relative",
         boxSizing: "border-box",

@@ -3,6 +3,7 @@ import Translator from "../../../resources/localization/translator";
 
 export const userDetailStyle = context => {
 	return {
+        background: "#232323",
 		display: "flex",
 		flexDirection: "column",
 		height: "100%",

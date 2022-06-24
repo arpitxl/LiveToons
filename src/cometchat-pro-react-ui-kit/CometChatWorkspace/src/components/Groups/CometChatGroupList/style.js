@@ -5,6 +5,7 @@ export const groupWrapperStyle = (props, theme) => {
     } : {};
 
     return {
+        background: "#232323",
         display: "flex",
         flexDirection: "column",
         height: "100%",
